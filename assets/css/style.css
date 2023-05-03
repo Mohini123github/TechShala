@@ -1,0 +1,27 @@
+.btn-color{
+    background-color: #004cad;
+    color: white;
+}
+.btn-color:hover{
+    background-color: #004cad;
+    color: white;
+}
+body{
+    font-family: 'Alice', serif;
+}
+.btn-log{
+    border : 1px solid #004cad;
+    background-color: white;
+    color: black;
+}
+.btn-log :hover{
+    border : 1px solid #004cad;
+    background-color: white;
+    color: black; 
+}
+.banner{
+    background-image: linear-gradient(180deg, white, #c2d6f1, #004cad);
+}
+.card-color{
+    background-color:#0056b1 ;
+}
