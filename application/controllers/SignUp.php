@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class SignUp extends CI_Controller {
     public function addUser(){
         $this->load->view('layout/header');
 		$this->load->view('common/signup');
