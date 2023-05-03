@@ -36,8 +36,8 @@
                                             </li>
                                         </ul>
                                         <form class="d-flex" role="search">
-                                            <button class="btn btn-log m-1">Log In</button>
-                                            <button class="btn btn-color m-1">Sign Up</button>
+                                            <a href="<?php echo base_url('Login/user');?>" class="btn btn-log m-1">Log In</a>
+                                            <a href="<?php echo base_url('SignUp/addUser');?>" class="btn btn-color m-1">Sign Up</a>
                                         </form>
                                         </div>
                                     </div>
