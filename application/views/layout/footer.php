@@ -23,6 +23,7 @@
     <b> <hr/></b>
     <h6 class="text-secondary">© 2023 Techshala™. All Rights Reserved.</h6>
   </div>
+  <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

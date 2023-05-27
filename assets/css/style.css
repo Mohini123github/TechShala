@@ -25,3 +25,9 @@ body{
 .card-color{
     background-color:#0056b1 ;
 }
+.bg-color{
+    background-color: #dfecf8 !important;
+}
+.dash-height{
+    min-height: 450px ;
+}
