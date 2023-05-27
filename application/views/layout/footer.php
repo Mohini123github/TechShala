@@ -10,9 +10,7 @@
         <p>Learning</p>
       </div>
       <div class="col-sm-3 text-center">
-        <h5>
-          LINKS
-        </h5><br>
+        <h5>LINKS</h5><br>
         <p>About Us</p>
         <p>Contact Us</p>
       </div>
@@ -25,6 +23,7 @@
     <b> <hr/></b>
     <h6 class="text-secondary">© 2023 Techshala™. All Rights Reserved.</h6>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

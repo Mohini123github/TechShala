@@ -22,9 +22,21 @@
                                         </button>
                                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="<?php echo base_url();?>">Home</a>
-                                            </li>
+                                            <?php if($this->session->userdata('id')){?>
+                                                <?php if($this->session->userdata('type') == 'user'){?>
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('Dashboard/user');?>">Dashboard</a>
+                                                </li>
+                                                <?php }elseif($this->session->userdata('type') == 'admin'){?>
+                                                    <li class="nav-item">
+                                                    <a class="nav-link active" aria-current="page" href="<?php echo base_url('Dashboard/admin');?>">Dashboard</a>
+                                                </li>
+                                                    <?php }?>
+                                            <?php } else{ ?>
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" aria-current="page" href="<?php echo base_url();?>">Home</a>
+                                                </li>
+                                            <?php } ?>
                                             <li class="nav-item">
                                             <a class="nav-link" href="<?php echo base_url('Welcome/aboutus');?>">About Us</a>
                                             </li>
@@ -35,10 +47,16 @@
                                             <a class="nav-link" href="<?php echo base_url('Welcome/help');?>">Help</a>
                                             </li>
                                         </ul>
+                                        <?php if($this->session->userdata('id')){?>
+                                            <form class="d-flex" role="search">
+                                                <a href="<?php echo base_url('Dashboard/logout');?>" class="btn btn-log m-1">Log Out</a>
+                                            </form>
+                                        <?php }else{?>
                                         <form class="d-flex" role="search">
-                                            <a href="<?php echo base_url('Login/user');?>" class="btn btn-log m-1">Log In</a>
+                                            <a href="<?php echo base_url('Login/login');?>" class="btn btn-log m-1">Log In</a>
                                             <a href="<?php echo base_url('SignUp/addUser');?>" class="btn btn-color m-1">Sign Up</a>
                                         </form>
+                                        <?php }?>
                                         </div>
                                     </div>
                 </nav>
