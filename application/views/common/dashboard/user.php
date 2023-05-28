@@ -29,6 +29,7 @@
         datatype: 'text/plain',
         success :function(response){
             $("#myTabContent").html(response);
+            showFile();
         }
     });
   }
@@ -100,4 +101,7 @@
         }
     });
   }
+  function runCode(){
+		document.getElementById('code_form_id').submit();
+	}
 </script>

@@ -2,7 +2,7 @@
     <div class="row bg-light">
         <div class="col-sm-12 border border-light py-2">
             <button class="btn btn-primary btn-sm" onclick="addFileform()">Create File</button>
-            <button class="btn btn-primary btn-sm float-end">run your code</button>
+            <button class="btn btn-primary btn-sm float-end" type="submit" onclick="runCode()">run your code</button>
         </div>
     </div>
     <div class="row bg-light">
@@ -10,7 +10,14 @@
             <div id="files"></div>
         </div>
         <div class="col-sm-10 dash-height border border-light">
-            <h1>code</h1>
+            <form action="<?php echo base_url('User/runCode');?>" method="post" id="code_form_id">
+                <div class="form-floating">
+                    <textarea class="form-control"style="border:none;background: transparent; min-height:300px; " name="code" placeholder="Leave a comment here">
+                        <?php isset($code)?print($code):"" ?>
+                    </textarea>
+                    <!-- <label for="floatingTextarea2">Code Here...</label> -->
+                </div>
+            </form>
         </div>
     </div>
     <div id="callModal"></div>
