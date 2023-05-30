@@ -30,5 +30,17 @@ class User_model extends CI_Model{
 					  ->get();
 					  return $q->result();
 	}
+	public function detailsEdit($file_id){
+		$this->db->where('id', $file_id);
+        $row = $this->db->get('file')->row_array();
+        return $row;
+	}
+	public function update($id,$data){
+		$this->db->update('file', $data, array('id' => $id));
+		return $id;
+	}
+	public function delete($file_id){
+		$this->db->delete('file', array('id' => $file_id));
+	}
 }
 ?>

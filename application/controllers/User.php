@@ -6,8 +6,9 @@ class User extends CI_Controller {
         parent::__construct();
         $this->load->model('User_model');
     }
-    public function callModal(){
-        $html = $this->load->view('common/modal.php',[],true);
+    public function callModal($file_id = ''){
+        $data['row'] = $this->User_model->detailsEdit($file_id);
+        $html = $this->load->view('common/modal.php',$data,true);
         $response['html'] = $html;
         echo json_encode($response);
     }
@@ -25,9 +26,21 @@ class User extends CI_Controller {
         header("Content-Type:application/json");
         echo json_encode($response);
     }
+    public function updateFile(){
+        $id = $this->input->post('id');
+        $data = [];
+        $data['file_name'] = $this->input->post('file_name');
+        $data['user_id'] = $this->input->post('user_id');
+        $response = $this->User_model->update($id,$data);
+        echo json_encode($response);
+    }
+    public function deleteFile($file_id){
+        $this->User_model->delete($file_id);
+    }
     public function runCode(){
         $code = $this->input->post('code');
-	    $output = eval("?> $code <?php"); 
+        // print_r($code);exit;
+	    eval("?> $code <?php"); 
     }
 }
 ?>
