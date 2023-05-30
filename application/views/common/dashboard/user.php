@@ -4,12 +4,12 @@
   <li class="nav-item me-2" role="presentation">
     <button class="nav-link active" data-bs-toggle="tab" onclick="Compiler();"type="button" role="tab" >Compiler</button>
   </li>
-  <!-- <li class="nav-item me-2" role="presentation">
+  <li class="nav-item me-2" role="presentation">
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" onclick="Workspaces();" data-bs-target="#profile-tab-pane" type="button" role="tab" >Wprkspaces</button>
   </li>
   <li class="nav-item me-2" role="presentation">
     <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" onclick="Settings();" data-bs-target="#disabled-tab-pane" type="button" role="tab">Settings</button>
-  </li> -->
+  </li>
 </ul>
 <div id="myTabContent"></div>
 </div>
@@ -98,7 +98,7 @@
         success :function(response){
           // alert(response);
           $("#output").text(response);
-          
+          // document.getElementById('code_form_id').submit();
         }
     })
   })
@@ -153,7 +153,4 @@
         }
     });
   });
-  function runCode(){
-    document.getElementById('code_id').submit();
-  }
 </script>
