@@ -19,7 +19,7 @@
                             <img src="img/phone.png" alt="">
                         </div>
                         <h4 class="text-center">Phone Number</h4>
-                        <h6 class="text-center text-secondary mb-4">+91 630-700-6787</h6>
+                        <h6 class="text-center text-secondary mb-4">+91 XX XXX XX XXX</h6>
                     </div>
                 </div>
             </div>

@@ -1,1 +1,1 @@
-<h1>hello from profile</h1>
+<h1>hello from profile page</h1>
