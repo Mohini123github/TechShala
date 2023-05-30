@@ -29,12 +29,8 @@ class Dashboard extends CI_Controller {
         echo json_encode($response);
     }
     public function workspace(){
-        $html = $this->load->view('common/dashboard/workspace.php');
-        $response['html'] = $html;
-        echo json_encode($response);
-    }
-    public function profile(){
-        $html = $this->load->view('common/dashboard/profile.php');
+        $data['file'] = $this->User_model->showFile();
+        $html = $this->load->view('common/dashboard/workspace.php',$data);
         $response['html'] = $html;
         echo json_encode($response);
     }
